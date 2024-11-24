@@ -51,5 +51,4 @@ func (db DB) GetAllResults(ctx context.Context) ([]model.Result, error) {
 	})
 
 	return results, nil
-
 }

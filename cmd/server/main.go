@@ -66,5 +66,4 @@ func static(app *fiber.App) {
 		PathPrefix: "deps",
 		Browse:     true,
 	}))
-
 }
