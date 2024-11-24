@@ -47,6 +47,6 @@ watch-templ:
 .PHONY: ci-scaffold
 ci-scaffold:
 	@mkdir -p cmd/server/deps
-	@echo "hello world" > cmd/server/public/hello.txt
+	@echo "hello world" > cmd/server/deps/hello.txt
 	@mkdir -p cmd/server/public
 	@echo "hello world" > cmd/server/public/hello.txt
