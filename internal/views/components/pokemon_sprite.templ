@@ -1,0 +1,11 @@
+package components
+
+import "strconv"
+
+templ PokemonSprite(dexID int, class string) {
+	<img
+		src={ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + strconv.Itoa(dexID) + ".png" }
+		class={ class }
+		style="image-rendering: pixelated;"
+	/>
+}
