@@ -43,3 +43,10 @@ gen-templ:
 .PHONY: watch-templ
 watch-templ:
 	@templ generate --watch --proxy=http://127.0.0.1:8000
+
+.PHONY: ci-scaffold
+ci-scallold:
+	@mkdir -p cmd/server/deps
+	@echo "hello world" > cmd/server/public/hello.txt
+	@mkdir -p cmd/server/public
+	@echo "hello world" > cmd/server/public/hello.txt
