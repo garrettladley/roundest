@@ -7,12 +7,13 @@ import (
 
 func (db DB) Schema(ctx context.Context) error {
 	const schema string = `
+	DROP TABLE IF EXISTS pokemon;
     CREATE TABLE IF NOT EXISTS pokemon (
         id BIGINT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         dex_id INTEGER NOT NULL,
-        up_votes INTEGER DEFAULT 0,
-        down_votes INTEGER DEFAULT 0,
+        up_votes INTEGER NOT NULL DEFAULT 0,
+        down_votes INTEGER NOT NULL DEFAULT 0,
         inserted_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
     );

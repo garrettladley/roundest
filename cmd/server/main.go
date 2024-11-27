@@ -13,14 +13,9 @@ import (
 	"github.com/garrettladley/roundest/internal/settings"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/filesystem"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	if err := godotenv.Load(".env"); err != nil {
-		log.Fatalf("Failed to load .env file: %v", err)
-	}
-
 	settings, err := settings.Load()
 	if err != nil {
 		log.Fatalf("Failed to load settings: %v", err)

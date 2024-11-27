@@ -8,14 +8,9 @@ import (
 	"github.com/garrettladley/roundest/internal/services/pokeapi"
 	"github.com/garrettladley/roundest/internal/settings"
 	"github.com/garrettladley/roundest/internal/storage/postgres"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	if err := godotenv.Load(".env"); err != nil {
-		log.Fatalf("Failed to load .env file: %v", err)
-	}
-
 	settings, err := settings.Load()
 	if err != nil {
 		log.Fatalf("Failed to load settings: %v", err)
