@@ -33,8 +33,7 @@ func newApp(settings settings.Settings) *fiber.App {
 		panic("internal/server: failed to create store: " + err.Error())
 	}
 
-	roundest := app.Group("/roundest")
-	handlers.NewService(store).Routes(roundest)
+	handlers.NewService(store).Routes(app)
 
 	return app
 }
