@@ -9,6 +9,5 @@ RUN make build-prod
 
 FROM scratch
 COPY --from=builder /app/bin/roundest /roundest
-COPY --from=builder /app/config/ /config/
 
 ENTRYPOINT [ "./roundest" ]
