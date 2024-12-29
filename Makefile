@@ -20,7 +20,6 @@ install: install-templ gen-templ
 	@mkdir -p cmd/server/deps
 	@wget -q -O cmd/server/deps/htmx-2.0.3.min.js.gz https://unpkg.com/htmx.org@2.0.3/dist/htmx.min.js.gz
 	@gunzip -f cmd/server/deps/htmx-2.0.3.min.js.gz
-	@npm install -D daisyui@latest
 	@npm install -D tailwindcss
 
 
